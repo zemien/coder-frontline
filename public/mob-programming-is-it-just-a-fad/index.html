@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-nz">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta itemprop="name" content="Mob Programming: Is It Just a Fad?">
+<meta itemprop="description" content="I first heard the term Mob Programming on a Hanselminutes podcast. I then got a closer look at it through Mark Pearl’s talk on the subject at an Agile Auckland Meetup. He even wrote a Leanpub book about Mob Programming. Mark is an Engineering Lead at MYOB and it’s great to hear him share his first-hand experience with running a mob team locally. I like the potential of Mob Programming but I&rsquo;ve been pondering for the past week: Is it just a fad?"><meta itemprop="datePublished" content="2017-03-05T15:00:14&#43;12:00" />
+<meta itemprop="dateModified" content="2017-03-05T15:00:14&#43;12:00" />
+<meta itemprop="wordCount" content="732">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Mob Programming: Is It Just a Fad?" />
+<meta property="og:description" content="I first heard the term Mob Programming on a Hanselminutes podcast. I then got a closer look at it through Mark Pearl’s talk on the subject at an Agile Auckland Meetup. He even wrote a Leanpub book about Mob Programming. Mark is an Engineering Lead at MYOB and it’s great to hear him share his first-hand experience with running a mob team locally. I like the potential of Mob Programming but I&rsquo;ve been pondering for the past week: Is it just a fad?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/mob-programming-is-it-just-a-fad/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-03-05T15:00:14&#43;12:00" />
+<meta property="article:modified_time" content="2017-03-05T15:00:14&#43;12:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mob Programming: Is It Just a Fad?"/>
+<meta name="twitter:description" content="I first heard the term Mob Programming on a Hanselminutes podcast. I then got a closer look at it through Mark Pearl’s talk on the subject at an Agile Auckland Meetup. He even wrote a Leanpub book about Mob Programming. Mark is an Engineering Lead at MYOB and it’s great to hear him share his first-hand experience with running a mob team locally. I like the potential of Mob Programming but I&rsquo;ve been pondering for the past week: Is it just a fad?"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Mob Programming: Is It Just a Fad?</title>
+	<link rel="stylesheet" href="/css/style.min.f74778e3020c87c304fb5982e09b92ba63a5c7f202996d4c7283d6057acfe9c1.css" integrity="sha256-90d44wIMh8ME+1mC4JuSumOlx/ICmW1McoPWBXrP6cE=" crossorigin="anonymous">
+	<style>.bg-img {background-image: url('/wp-content/uploads/sites/2/2017/03/angry-mob.jpg');}</style>
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="/">Coder Frontline</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="/posts/">Posts</a>
+				<a href="/categories/">Categories</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<button id="img-btn" class="hdr-btn" title="Featured Image"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></button><span class="hdr-social hide-in-mobile"><a href="https://www.linkedin.com/in/shawnlamnz" target="_blank" rel="noopener me" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="https://github.com/zemien" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="/posts/">Posts</a></li>
+			<li><a href="/categories/">Categories</a></li>
+		</ul>
+	</div>
+
+
+	<div class="bg-img"></div>
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Mar 5, 2017</span></div>
+				<h1>Mob Programming: Is It Just a Fad?</h1>
+			</header>
+			<div class="content">
+				<p>I first heard the term Mob Programming on a <a href="http://hanselminutes.com/553/mob-programming-with-woody-zuill">Hanselminutes podcast</a>. I then got a closer look at it through <a href="http://blog.markpearl.co.za/">Mark Pearl</a>’s talk on the subject at an <a href="https://www.meetup.com/Agile-Auckland/events/237711745/">Agile Auckland Meetup</a>. He even wrote a <a href="https://leanpub.com/GettingStartedWithMobProgramming">Leanpub book</a> about Mob Programming. Mark is an Engineering Lead at MYOB and it’s great to hear him share his first-hand experience with running a mob team locally. I like the potential of Mob Programming but I&rsquo;ve been pondering for the past week: Is it just a fad?</p>
+<p>While I have not tried Mob Programming, I experienced Pair Programming at a Code Retreat and finally understood the appeal of collaborative coding. I have subsequently failed to get more people at my workplace to adopt it. Everyone agrees with the concept as if it&rsquo;s a utopian ideal that ‘good' teams subscribe to, but is impractical in the ‘real world'. I believe those same reasons will prevent mass adoption of Mob Programming.</p>
+<p>Realistically, only a small subset of development teams will be able to pull this off. Hence, I&rsquo;ve started thinking about the attributes that mob members must possess. I don&rsquo;t see this as a checklist. Rather, each attribute is on a scale and the likelihood of success increases when more members sit on the mature end of the range.</p>
+<p>Consider this list the ramblings of an uninformed man. They have not been empirically validated and I invite you to challenge me in the comments section. I may update this list as I grow and read more:</p>
+<ul>
+<li>Relatively young team: I am referring to the age of the team as opposed to individual team members (although that will have a factor as well). Younger teams are more open to new practices, while older teams are more set in their ways. I am not immune – I have caught myself getting defensive when a colleague suggests a different way of doing something. Changing practices that have worked well is a tough ask.</li>
+<li>Crave feedback: Some people are ‘open to feedback' - they will receive your comments but then vigorously defend their own ideas. I am describing a more extreme version where you actively invite and enjoy constructive feedback. This is such an important quality to possess as mob programming is feedback-centric. It&rsquo;s not going to succeed if members are stressed out and defensive going into a mob. I wished I could say I craved feedback, but I&rsquo;m working on minimising my ego when I get code reviewed.</li>
+<li>Empathic communicator: Closely related to craving feedback is the ability to give them. Good communication requires many sub-skills and the one I&rsquo;ve chosen to highlight is empathy. When you have 3 or 4 chefs in the kitchen and only one cook, it&rsquo;s important that each chef is given the opportunity to infuse the dish with their magic ingredient. I have worked with people who sit somewhere on the <a href="https://en.wikipedia.org/wiki/Autism_spectrum">autism spectrum</a> and they sometimes miss social cues. They railroad the discussion and it escalates into an us vs. them battle, as opposed to compromising. They may need to be actively managed so that they don&rsquo;t dominate the conversation, or conversely, feel that they are not being heard.</li>
+</ul>
+<p>Those are just some of the soft skills I think a good mob programming team requires. I have not mentioned a single technical skill or process as they are just the icing on a cake made up of those foundational abilities. However, a couple of questions came up during Mark&rsquo;s talk that he concedes are common questions. They were:</p>
+<ol>
+<li>How do you convince management that 4 programmers working on 1 problem at a time is better/cheaper/faster than 4 people working on 4 different problems?</li>
+<li>How is individual performance appraised when work is completed collectively?</li>
+</ol>
+<p>Unfortunately, I don&rsquo;t think his answers are convincing enough to allay management&rsquo;s fears about adopting mob programming. A good advice I learnt from <a href="http://amzn.to/2lLEPkN">Tim Ferriss' The 4-Hour Workweek</a> is that it is easier to ask for forgiveness than ask for permission. This may be one of those times where a development team just needs to sneak in mob programming and demonstrate the results at the end.</p>
+<p>I will attempt to answer my own question: I think Mob Programming is a long-lived fad. It&rsquo;s going to be around for a long time just like Pair Programming has: Well-acknowledged but poorly-adopted. Which is quite a shame.</p>
+<p>Photo credit: <a href="https://www.flickr.com/photos/archeon/10388600663/">hans s</a> via <a href="https://visualhunt.com/re/97081a">VisualHunt.com</a> /  <a href="http://creativecommons.org/licenses/by-nd/2.0/">CC BY-ND</a></p>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>732 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2017-03-05 16:00 &#43;1300</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="next-post" href="/developer-pride/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;Newer</span><br><span>Developer Pride</span>
+			</a>
+			<a class="prev-post" href="/are-we-becoming-blue-collared-workers/">
+				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>Are We Becoming Blue-Collared Workers?</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2021 <a href="/">Shawn Lam</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-74441668-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

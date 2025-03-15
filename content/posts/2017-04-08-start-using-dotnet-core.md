@@ -1,0 +1,22 @@
+---
+title: Should I Start Using Dotnet Core?
+date: 2017-04-08T12:35:36+12:00
+featuredImg: /wp-content/uploads/sites/2/2017/04/retro-television-vintage-musical.jpg
+categories:
+  - Programming
+---
+I wrote about my [negative experiences with ASP .Net Core](/cutting-edge-technology-cuts/) almost a year ago. I'm ready to reverse my opinion and think that ASP .Net Core is ready for primetime. I recently completed a multi-month project at work that primarily used ASP .Net Core and I had a positive experience. I share some thoughts and tips if you want to start using Dotnet Core (as it is sometimes called) beyond Hello World. These suggestions come from the perspective of a corporate software developer who is familiar with the full .Net framework and Visual Studio.
+
+<!--more-->
+
+Let's get the obvious out of the way: **Don't upgrade existing solutions** to ASP .Net Core if there is no need to. It is not worth the trouble as my initial post details. The full .Net framework is very stable, well supported by third-party extensions, and will be in use for years to come. .Net Core as a whole sits on a different trajectory - it was rebuilt from the ground up to support .Net on non-Windows platforms. Even if you wanted to take advantage of that fact to make your existing product cross-platform, I would still suggest taking a long look at your design and architecture. It may be better to start fresh than to upgrade the solution.
+
+Next, start using **Visual Studio 2017**, now available for both [Mac](https://www.visualstudio.com/vs/visual-studio-mac/) and [Windows](https://www.visualstudio.com/free-developer-offers/). You can develop apps on VS Code, but Visual Studio's extension ecosystem has some great plugins. Most things from [Mads Kristensen](https://github.com/madskristensen) are good, namely [Bundler & Minifier](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.bundlerminifier) and [Web Compiler](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler). Bundler & Minifier creates a bundleconfig.json that lets you bundle and minify CSS and JavaScript files, while Web Compiler does the same for Less and SASS files. Both work similar to Gulp/Grunt without having to install node or npm on your machine.
+
+The other reason I encourage using VS2017 is it finally uses **.csproj instead of .xproj/project.json** for project files. I found configuring project.json to be finicky at times. Plus the .csproj format has full MSBuild support, which is great news for CI/CD environments. Microsoft has good documentation covering the differences between [.csproj and project.json](https://docs.microsoft.com/en-us/dotnet/articles/core/tools/project-json-to-csproj).
+
+Do you use a **logging framework** such as Log4Net? dotnet core has a generic logging layer that can interface with any other logging framework. However, check that your logging framework can support the appenders that you want to use. As of today, Log4Net doesn't [support AdoNetAppender and SmtpAppender](https://logging.apache.org/log4net/release/framework-support.html), which are pretty common outputs for logs. Thankfully, Log4Net is open-source so we could use most of their appender implementation but pointing to dotnet core-compatible libraries (native SqlClient for AdoNetAppender and [MailKit](https://github.com/jstedfast/MailKit) for SmtpAppender).
+
+Lastly, think about your solution's **external dependencies**. Most projects need inputs from the outside world at some stage. You'll have to think if this will be affected by moving to .Net Core. For example, while I could use Windows Authentication for my intranet web application, I was not able to look up Active Directory details for the given user, such as their full name. Active Directory is a Windows feature and has not been ported over to dot net core. The same concern arises for any old databases you need to connect to - we still have SQL Server 2000 and old IBM DB/2 databases in production. All of these roadblocks can be solved by building your own shim or using a NuGet package, but they represent unexpected roadblocks that will slow .Net Core adoption.
+
+I hope the above points have helped you prepare for most eventualities. Tell me your experience when you start using DotNet Core!

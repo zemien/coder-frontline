@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-nz">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta itemprop="name" content="Should I Start Using Dotnet Core?">
+<meta itemprop="description" content="I wrote about my negative experiences with ASP .Net Core almost a year ago. I&rsquo;m ready to reverse my opinion and think that ASP .Net Core is ready for primetime. I recently completed a multi-month project at work that primarily used ASP .Net Core and I had a positive experience. I share some thoughts and tips if you want to start using Dotnet Core (as it is sometimes called) beyond Hello World. These suggestions come from the perspective of a corporate software developer who is familiar with the full .Net framework and Visual Studio."><meta itemprop="datePublished" content="2017-04-08T12:35:36&#43;12:00" />
+<meta itemprop="dateModified" content="2017-04-08T12:35:36&#43;12:00" />
+<meta itemprop="wordCount" content="590">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Should I Start Using Dotnet Core?" />
+<meta property="og:description" content="I wrote about my negative experiences with ASP .Net Core almost a year ago. I&rsquo;m ready to reverse my opinion and think that ASP .Net Core is ready for primetime. I recently completed a multi-month project at work that primarily used ASP .Net Core and I had a positive experience. I share some thoughts and tips if you want to start using Dotnet Core (as it is sometimes called) beyond Hello World. These suggestions come from the perspective of a corporate software developer who is familiar with the full .Net framework and Visual Studio." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/should-i-start-using-dotnet-core/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-04-08T12:35:36&#43;12:00" />
+<meta property="article:modified_time" content="2017-04-08T12:35:36&#43;12:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Should I Start Using Dotnet Core?"/>
+<meta name="twitter:description" content="I wrote about my negative experiences with ASP .Net Core almost a year ago. I&rsquo;m ready to reverse my opinion and think that ASP .Net Core is ready for primetime. I recently completed a multi-month project at work that primarily used ASP .Net Core and I had a positive experience. I share some thoughts and tips if you want to start using Dotnet Core (as it is sometimes called) beyond Hello World. These suggestions come from the perspective of a corporate software developer who is familiar with the full .Net framework and Visual Studio."/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Should I Start Using Dotnet Core?</title>
+	<link rel="stylesheet" href="/css/style.min.f74778e3020c87c304fb5982e09b92ba63a5c7f202996d4c7283d6057acfe9c1.css" integrity="sha256-90d44wIMh8ME+1mC4JuSumOlx/ICmW1McoPWBXrP6cE=" crossorigin="anonymous">
+	<style>.bg-img {background-image: url('/wp-content/uploads/sites/2/2017/04/retro-television-vintage-musical.jpg');}</style>
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="/">Coder Frontline</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="/posts/">Posts</a>
+				<a href="/categories/">Categories</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<button id="img-btn" class="hdr-btn" title="Featured Image"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></button><span class="hdr-social hide-in-mobile"><a href="https://www.linkedin.com/in/shawnlamnz" target="_blank" rel="noopener me" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="https://github.com/zemien" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="/posts/">Posts</a></li>
+			<li><a href="/categories/">Categories</a></li>
+		</ul>
+	</div>
+
+
+	<div class="bg-img"></div>
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Apr 8, 2017</span></div>
+				<h1>Should I Start Using Dotnet Core?</h1>
+			</header>
+			<div class="content">
+				<p>I wrote about my <a href="/cutting-edge-technology-cuts/">negative experiences with ASP .Net Core</a> almost a year ago. I&rsquo;m ready to reverse my opinion and think that ASP .Net Core is ready for primetime. I recently completed a multi-month project at work that primarily used ASP .Net Core and I had a positive experience. I share some thoughts and tips if you want to start using Dotnet Core (as it is sometimes called) beyond Hello World. These suggestions come from the perspective of a corporate software developer who is familiar with the full .Net framework and Visual Studio.</p>
+<p>Let&rsquo;s get the obvious out of the way: <strong>Don&rsquo;t upgrade existing solutions</strong> to ASP .Net Core if there is no need to. It is not worth the trouble as my initial post details. The full .Net framework is very stable, well supported by third-party extensions, and will be in use for years to come. .Net Core as a whole sits on a different trajectory - it was rebuilt from the ground up to support .Net on non-Windows platforms. Even if you wanted to take advantage of that fact to make your existing product cross-platform, I would still suggest taking a long look at your design and architecture. It may be better to start fresh than to upgrade the solution.</p>
+<p>Next, start using <strong>Visual Studio 2017</strong>, now available for both <a href="https://www.visualstudio.com/vs/visual-studio-mac/">Mac</a> and <a href="https://www.visualstudio.com/free-developer-offers/">Windows</a>. You can develop apps on VS Code, but Visual Studio&rsquo;s extension ecosystem has some great plugins. Most things from <a href="https://github.com/madskristensen">Mads Kristensen</a> are good, namely <a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.bundlerminifier">Bundler &amp; Minifier</a> and <a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler">Web Compiler</a>. Bundler &amp; Minifier creates a bundleconfig.json that lets you bundle and minify CSS and JavaScript files, while Web Compiler does the same for Less and SASS files. Both work similar to Gulp/Grunt without having to install node or npm on your machine.</p>
+<p>The other reason I encourage using VS2017 is it finally uses <strong>.csproj instead of .xproj/project.json</strong> for project files. I found configuring project.json to be finicky at times. Plus the .csproj format has full MSBuild support, which is great news for CI/CD environments. Microsoft has good documentation covering the differences between <a href="https://docs.microsoft.com/en-us/dotnet/articles/core/tools/project-json-to-csproj">.csproj and project.json</a>.</p>
+<p>Do you use a <strong>logging framework</strong> such as Log4Net? dotnet core has a generic logging layer that can interface with any other logging framework. However, check that your logging framework can support the appenders that you want to use. As of today, Log4Net doesn&rsquo;t <a href="https://logging.apache.org/log4net/release/framework-support.html">support AdoNetAppender and SmtpAppender</a>, which are pretty common outputs for logs. Thankfully, Log4Net is open-source so we could use most of their appender implementation but pointing to dotnet core-compatible libraries (native SqlClient for AdoNetAppender and <a href="https://github.com/jstedfast/MailKit">MailKit</a> for SmtpAppender).</p>
+<p>Lastly, think about your solution&rsquo;s <strong>external dependencies</strong>. Most projects need inputs from the outside world at some stage. You&rsquo;ll have to think if this will be affected by moving to .Net Core. For example, while I could use Windows Authentication for my intranet web application, I was not able to look up Active Directory details for the given user, such as their full name. Active Directory is a Windows feature and has not been ported over to dot net core. The same concern arises for any old databases you need to connect to - we still have SQL Server 2000 and old IBM DB/2 databases in production. All of these roadblocks can be solved by building your own shim or using a NuGet package, but they represent unexpected roadblocks that will slow .Net Core adoption.</p>
+<p>I hope the above points have helped you prepare for most eventualities. Tell me your experience when you start using DotNet Core!</p>
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>590 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2017-04-08 12:35 &#43;1200</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="next-post" href="/impact-the-world-with-impactnpo/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;Newer</span><br><span>Impact the World with impactNPO</span>
+			</a>
+			<a class="prev-post" href="/developer-pride/">
+				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>Developer Pride</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2021 <a href="/">Shawn Lam</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-74441668-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

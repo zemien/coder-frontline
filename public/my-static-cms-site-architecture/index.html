@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-nz">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta itemprop="name" content="My static CMS site architecture">
+<meta itemprop="description" content="I mentioned in my last post that I started 2019 by moving this blog off WordPress and into a Hugo static CMS set up. I will go into more detail about the particular approach I took to migrate the site over the next several posts. I will start the series off by quickly showing you the main architectural differences between a traditional CMS like WordPress and a modern static CMS like Hugo or Jekkyl."><meta itemprop="datePublished" content="2019-02-06T15:00:00&#43;13:00" />
+<meta itemprop="dateModified" content="2019-02-06T15:00:00&#43;13:00" />
+<meta itemprop="wordCount" content="624">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="My static CMS site architecture" />
+<meta property="og:description" content="I mentioned in my last post that I started 2019 by moving this blog off WordPress and into a Hugo static CMS set up. I will go into more detail about the particular approach I took to migrate the site over the next several posts. I will start the series off by quickly showing you the main architectural differences between a traditional CMS like WordPress and a modern static CMS like Hugo or Jekkyl." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/my-static-cms-site-architecture/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-02-06T15:00:00&#43;13:00" />
+<meta property="article:modified_time" content="2019-02-06T15:00:00&#43;13:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="My static CMS site architecture"/>
+<meta name="twitter:description" content="I mentioned in my last post that I started 2019 by moving this blog off WordPress and into a Hugo static CMS set up. I will go into more detail about the particular approach I took to migrate the site over the next several posts. I will start the series off by quickly showing you the main architectural differences between a traditional CMS like WordPress and a modern static CMS like Hugo or Jekkyl."/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>My static CMS site architecture</title>
+	<link rel="stylesheet" href="/css/style.min.f74778e3020c87c304fb5982e09b92ba63a5c7f202996d4c7283d6057acfe9c1.css" integrity="sha256-90d44wIMh8ME+1mC4JuSumOlx/ICmW1McoPWBXrP6cE=" crossorigin="anonymous">
+	<style>.bg-img {background-image: url('/my-static-cms-site-architecture/jam-glass-breakfast.jpg');}</style>
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="/">Coder Frontline</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="/posts/">Posts</a>
+				<a href="/categories/">Categories</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<button id="img-btn" class="hdr-btn" title="Featured Image"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></button><span class="hdr-social hide-in-mobile"><a href="https://www.linkedin.com/in/shawnlamnz" target="_blank" rel="noopener me" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="https://github.com/zemien" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="/posts/">Posts</a></li>
+			<li><a href="/categories/">Categories</a></li>
+		</ul>
+	</div>
+
+
+	<div class="bg-img"></div>
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Feb 6, 2019</span></div>
+				<h1>My static CMS site architecture</h1>
+			</header>
+			<div class="content">
+				<p>I mentioned in my last post that I started 2019 by <a href="/new-year-new-beginnings/">moving this blog off WordPress</a> and into a Hugo static CMS set up. I will go into more detail about the particular approach I took to migrate the site over the next several posts. I will start the series off by quickly showing you the main architectural differences between a traditional CMS like WordPress and a modern static CMS like Hugo or Jekkyl.</p>
+<figure>
+    <img src="wordpress.svg"
+         alt="Architecture diagram showing both blogger and visitor connecting to a LAMP stack server running WordPress"/> <figcaption>
+            <h4>A typical WordPress site architecture</h4>
+        </figcaption>
+</figure>
+
+<p>The image above shows a typical WordPress server on the web. The blogger connects to the WordPress administrator console running on the web server to manage content, while site visitors connect to the same server, either directly or via a CDN (Content Delivery Network). The CMS builds the page on-the-fly when a request for a particular page is received.</p>
+<p>It is most likely an open-source LAMP stack server, meaning it is composed of Linux (Operating System), Apache (Web Server Software), MySQL (Database), and PHP (Programming language). You can run WordPress on Windows and SQL Server, but a LAMP server starts at $0 licensing costs. This is a major factor for the LAMP stack&rsquo;s continuing popularity.</p>
+<p>A static CMS pushes the page building process up the production line, to when the blogger is writing content. The image below shows a basic static CMS architecture using Hugo. The blogger will create the content on their local environment such as a PC or Mac, and then run the Hugo command-line tool to generate the static .html files. These files are then pushed onto any web server, since all web servers are capable of serving up normal .html, .css, and .js files.</p>
+<figure>
+    <img src="hugo-basic.svg"
+         alt="Architecture diagram showing a simple Hugo site setup where the blogger publishes pre-built .html files to web server"/> <figcaption>
+            <h4>A basic Hugo site architecture</h4>
+        </figcaption>
+</figure>
+
+<p>This is certainly adequate and most closely resembles the traditional low-cost WordPress server set up. However, the rise of cloud computing and serverless technologies is creating new possibilities for how we host content-rich websites that are scalable and yet cost very little.</p>
+<figure>
+    <img src="hugo-advanced.svg"
+         alt="Architecture diagram showing an advanced Hugo site setup"/> <figcaption>
+            <h4>An advanced Hugo site architecture</h4>
+        </figcaption>
+</figure>
+
+<p>The architecture diagram above shows how I am currently building this blog. I, the blogger, write my content on my Mac and push changes up to a Git repository hosted on <a href="https://dev.azure.com">Azure DevOps</a> (previously known as Visual Studio Team Services or Visual Studio Online). GitHub is a more popular option, but I am familiar with Azure DevOps and like its all-in-one build and release pipelines.</p>
+<p>I use the <a href="https://docs.microsoft.com/en-us/azure/devops/organizations/billing/buy-more-build-vs?view=azure-devops">complimentary build and release minutes</a> included in the free tier. The amount changes from time to time but is currently 30 hours a month, which is more than adequate for my needs. My site is built in the cloud and then released into an Azure Storage Blob account, with <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website">static website hosting</a> turned on.</p>
+<p>Lastly, I place a CDN service in front of the static website to get the benefits of a cheap, hihgly-scalable, and highly-responsive content delivery system. I have specifically chosen the Premium Verizon CDN offering, and I will explain the reasons why in a future post. A site visitor will be served my content from the closest edge node, so I do not have to worry about distribution or load balancing myself.</p>
+<p>The diagram also has an optional App Service API that I have not implemented because I have no need for it. This is another common component of what&rsquo;s known as the <a href="https://jamstack.org/">JAMstack</a> - an alternative to the LAMP stack. JAM in this case stands for JavaScript (Programming language), API (Backend), and Markup (Content definition language). There are a lot of well-written information about what makes a good JAMstack on that site. My blog is more a J-Mstack as it stands, but I am considering adding an API layer for site searches.</p>
+<p>Next time: I write about how each component is set up.</p>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>624 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-02-06 15:00 &#43;1300</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="next-post" href="/how-do-you-eat-a-giant-pumpkin/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;Newer</span><br><span>How do you eat a giant pumpkin?</span>
+			</a>
+			<a class="prev-post" href="/new-year-new-beginnings/">
+				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>New Year, New Beginnings</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2021 <a href="/">Shawn Lam</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-74441668-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Coder Frontline</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Coder Frontline</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-nz</language>
+    <copyright>Creative Commons Attribution 4.0 International License</copyright>
+    <lastBuildDate>Fri, 17 Apr 2020 11:08:00 +1200</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>/categories/programming/</link>
+      <pubDate>Fri, 17 Apr 2020 11:08:00 +1200</pubDate>
+      
+      <guid>/categories/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Culture</title>
+      <link>/categories/culture/</link>
+      <pubDate>Thu, 05 Dec 2019 22:08:00 +1300</pubDate>
+      
+      <guid>/categories/culture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>General</title>
+      <link>/categories/general/</link>
+      <pubDate>Mon, 31 Dec 2018 09:00:00 +1300</pubDate>
+      
+      <guid>/categories/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>People</title>
+      <link>/categories/people/</link>
+      <pubDate>Sat, 29 Sep 2018 21:50:12 +1200</pubDate>
+      
+      <guid>/categories/people/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Agile</title>
+      <link>/categories/agile/</link>
+      <pubDate>Sun, 14 May 2017 22:10:19 +1200</pubDate>
+      
+      <guid>/categories/agile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Strategy</title>
+      <link>/categories/strategy/</link>
+      <pubDate>Sun, 08 May 2016 01:18:46 +1200</pubDate>
+      
+      <guid>/categories/strategy/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

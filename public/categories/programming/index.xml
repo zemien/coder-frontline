@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Coder Frontline</title>
+    <link>/categories/programming/</link>
+    <description>Recent content in Programming on Coder Frontline</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-nz</language>
+    <copyright>Creative Commons Attribution 4.0 International License</copyright>
+    <lastBuildDate>Fri, 17 Apr 2020 11:08:00 +1200</lastBuildDate><atom:link href="/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>12 Days of Learning</title>
+      <link>/12-days-of-learning/</link>
+      <pubDate>Fri, 17 Apr 2020 11:08:00 +1200</pubDate>
+      
+      <guid>/12-days-of-learning/</guid>
+      <description>The greatest challenge for developers who want to stay on the forefront of technology is the sheer amount of innovation happening everywhere. It is simply overwhelming for anyone to know everything. My advice for people starting out is to focus on one stack, e.g. React web apps, and get really comfortable with it so you build a solid technical foundation. It is still natural to feel like you&amp;rsquo;re falling behind when others talk about some cool tech they used.</description>
+    </item>
+    
+    <item>
+      <title>Chrome&#39;s SameSite Cookie Changes are Breaking Apps</title>
+      <link>/chromes-samesite-cookie-changes-are-breaking-apps/</link>
+      <pubDate>Sat, 22 Feb 2020 21:36:00 +1300</pubDate>
+      
+      <guid>/chromes-samesite-cookie-changes-are-breaking-apps/</guid>
+      <description>Updated 8 April 2020 with alternative regex if your OS or framework or app automatically adds the SameSite=Lax header to your session cookies. It is important to double check what your app is emitting so you can tailor the regex to suit!
+ I just spent a good 6 hours of my life trying to debug a weird web app issue that I finally pinned down to the SameSite cookie attribute changes spearheaded by Google.</description>
+    </item>
+    
+    <item>
+      <title>AppDynamics APM for .Net Apps Cheat Sheet</title>
+      <link>/appdynamics-apm-for-.net-apps-cheat-sheet/</link>
+      <pubDate>Thu, 01 Aug 2019 17:28:00 +1200</pubDate>
+      
+      <guid>/appdynamics-apm-for-.net-apps-cheat-sheet/</guid>
+      <description>I&amp;rsquo;m getting involved with Cisco AppDynamics APM (Application Performance Monitoring) at work and have been finding lots of little tricks and gotchas with instrumenting ASP .Net web applications on Windows servers. I have compiled a list of quick tips that may help you set yourself up for APM bliss.
+.Net Agent Installation The .Net Agent Setup on Windows is a breeze to go through. It even installs a Windows application called AppDynamics Agent Configuration that lets you easily re-configure the agent afterwards.</description>
+    </item>
+    
+    <item>
+      <title>TLS 1.2 support on .Net 4.5</title>
+      <link>/tls-1.2-support-on-.net-4.5/</link>
+      <pubDate>Fri, 19 Jul 2019 14:00:00 +1200</pubDate>
+      
+      <guid>/tls-1.2-support-on-.net-4.5/</guid>
+      <description>Part of my job involves supporting legacy software running on older .Net Frameworks. There was a period of upheaval last year when support for TLS 1.0 was switched off by many payment processing gateways. A lot of online guides use this simple trick to force .Net 4.5 application to use TLS 1.2:
+ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12; This turns out to be a bad move because the code will only support TLS 1.</description>
+    </item>
+    
+    <item>
+      <title>Wireshark Capture Filter by Host IP</title>
+      <link>/wireshark-capture-filter-by-host-ip/</link>
+      <pubDate>Fri, 19 Jul 2019 13:28:00 +1200</pubDate>
+      
+      <guid>/wireshark-capture-filter-by-host-ip/</guid>
+      <description>I keep forgetting this simple syntax and hopefully this will come in handy. In Wireshark you can specify a capture filter to only log traffic to/from a specific IP address with:
+host {ipAddress}   Wireshark Capture Filter   I needed to use a capture filter because I was running captures on a low-spec server, and without a capture filter Wireshark eats up all the memory.
+Related tip: Use nslookup to get the IP address that is resolved to.</description>
+    </item>
+    
+    <item>
+      <title>Hello from DevCamp</title>
+      <link>/hello-from-devcamp/</link>
+      <pubDate>Sat, 29 Jun 2019 17:28:00 +1200</pubDate>
+      
+      <guid>/hello-from-devcamp/</guid>
+      <description>Hello from DevCamp 2019 - Datacom&amp;rsquo;s premier developer unconference.
+  Hello from DevCamp   Join us next year - check out Datacom Jobs</description>
+    </item>
+    
+    <item>
+      <title>Update SSL Cert on Azure App Service</title>
+      <link>/update-ssl-cert-on-azure-app-service/</link>
+      <pubDate>Sat, 06 Apr 2019 09:00:00 +1300</pubDate>
+      
+      <guid>/update-ssl-cert-on-azure-app-service/</guid>
+      <description>There are so many different tutorials on how to provision and install an SSL/TLS certificate on Azure App Services that I thought I&amp;rsquo;d write one that worked for me. I added some indicative timelines so you know how long each step may take. As a rule I recommend starting this process at least a week before the current certificate will expire.
+Pre-requisites Find a different tutorial if you don&amp;rsquo;t have these exact components because your results may vary:</description>
+    </item>
+    
+    <item>
+      <title>How do you eat a giant pumpkin?</title>
+      <link>/how-do-you-eat-a-giant-pumpkin/</link>
+      <pubDate>Sun, 17 Mar 2019 09:00:00 +1300</pubDate>
+      
+      <guid>/how-do-you-eat-a-giant-pumpkin/</guid>
+      <description>Here&amp;rsquo;s a useful analogy I use to explain how to break a feature down into its unit tests. I am using it in a TDD (Test-Driven Development) workshop I&amp;rsquo;m conducting in my team. Putting aside the fact that giant pumpkins are mainly bred for show, this will hopefully help new programmers when they&amp;rsquo;re faced with any programming challenge. I created this analogy as an alternative to &amp;ldquo;How do you eat an elephant?</description>
+    </item>
+    
+    <item>
+      <title>My static CMS site architecture</title>
+      <link>/my-static-cms-site-architecture/</link>
+      <pubDate>Wed, 06 Feb 2019 15:00:00 +1300</pubDate>
+      
+      <guid>/my-static-cms-site-architecture/</guid>
+      <description>I mentioned in my last post that I started 2019 by moving this blog off WordPress and into a Hugo static CMS set up. I will go into more detail about the particular approach I took to migrate the site over the next several posts. I will start the series off by quickly showing you the main architectural differences between a traditional CMS like WordPress and a modern static CMS like Hugo or Jekkyl.</description>
+    </item>
+    
+    <item>
+      <title>Starting My Functional Journey</title>
+      <link>/starting-my-functional-journey/</link>
+      <pubDate>Sun, 20 May 2018 12:44:45 +1200</pubDate>
+      
+      <guid>/starting-my-functional-journey/</guid>
+      <description>I joined a new team as Tech Lead about 6 months ago. Rather than sit back and bark orders, it has become even more important to sharpen my technical skills. I&amp;rsquo;ve chosen to start on my functional journey to become proficient in F# - the .Net functional programming language.
+F# has been around for a long time but many from the C# camp have dismissed it as a niche language for the scientific and mathematic arena.</description>
+    </item>
+    
+    <item>
+      <title>Invest in the Best Tools You Can Afford</title>
+      <link>/invest-in-the-best-tools-you-can-afford/</link>
+      <pubDate>Sun, 03 Dec 2017 10:56:07 +1200</pubDate>
+      
+      <guid>/invest-in-the-best-tools-you-can-afford/</guid>
+      <description>I recently bought a new steam iron. I’ve been wearing more business shirts to work lately, which resulted in an increased number of creased shirts every wash. I have a working steam iron and I only bought the new one because it was heavily discounted. My usual philosophy is to use a piece of equipment until it breaks before getting a replacement, but I had a niggling feeling that I needed it.</description>
+    </item>
+    
+    <item>
+      <title>The Little Things Matter</title>
+      <link>/the-little-things-matter/</link>
+      <pubDate>Mon, 07 Aug 2017 16:28:09 +1200</pubDate>
+      
+      <guid>/the-little-things-matter/</guid>
+      <description>&lt;p&gt;I had a day off today after a stressful month. So I decided to treat myself to a massage to work out those tense shoulders I&amp;rsquo;ve been carrying around. But I saw something before the massage even started that reaffirmed my belief that the little things matter more than we appreciate.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Humidity Monitor - Winter of Xamarin 2017</title>
+      <link>/humidity-monitor-winter-of-xamarin-2017/</link>
+      <pubDate>Wed, 28 Jun 2017 23:42:47 +1200</pubDate>
+      
+      <guid>/humidity-monitor-winter-of-xamarin-2017/</guid>
+      <description>I&amp;rsquo;m delighted to announce that I won Microsoft&amp;rsquo;s Winter of Xamarin competition this year with my Humidity Monitor App. Here&amp;rsquo;s my submission video:
+The sanitised source code (with the keys and connection strings removed) is on my GitHub repo. Here&amp;rsquo;s a rough guide on how you can replicate the project and some ideas to extend it further:
+Pre-requisites  A Raspberry Pi 3 running Windows 10 IoT Sense HAT module Recommended: 40-pin GPIO ribbon cable to keep some distance between the Pi and the Sense HAT because the Pi&amp;rsquo;s hot running temperature will affect Sense HAT readings (Optional) A Belkin WeMo Smart Switch or alternative smart switch that can connect to IFTTT (Optional) A dehumidifier that can be turned on from the switch (i.</description>
+    </item>
+    
+    <item>
+      <title>Should I Start Using Dotnet Core?</title>
+      <link>/should-i-start-using-dotnet-core/</link>
+      <pubDate>Sat, 08 Apr 2017 12:35:36 +1200</pubDate>
+      
+      <guid>/should-i-start-using-dotnet-core/</guid>
+      <description>&lt;p&gt;I wrote about my &lt;a href=&#34;/cutting-edge-technology-cuts/&#34;&gt;negative experiences with ASP .Net Core&lt;/a&gt; almost a year ago. I&amp;rsquo;m ready to reverse my opinion and think that ASP .Net Core is ready for primetime. I recently completed a multi-month project at work that primarily used ASP .Net Core and I had a positive experience. I share some thoughts and tips if you want to start using Dotnet Core (as it is sometimes called) beyond Hello World. These suggestions come from the perspective of a corporate software developer who is familiar with the full .Net framework and Visual Studio.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mob Programming: Is It Just a Fad?</title>
+      <link>/mob-programming-is-it-just-a-fad/</link>
+      <pubDate>Sun, 05 Mar 2017 15:00:14 +1200</pubDate>
+      
+      <guid>/mob-programming-is-it-just-a-fad/</guid>
+      <description>I first heard the term Mob Programming on a Hanselminutes podcast. I then got a closer look at it through Mark Pearl’s talk on the subject at an Agile Auckland Meetup. He even wrote a Leanpub book about Mob Programming. Mark is an Engineering Lead at MYOB and it’s great to hear him share his first-hand experience with running a mob team locally. I like the potential of Mob Programming but I&amp;rsquo;ve been pondering for the past week: Is it just a fad?</description>
+    </item>
+    
+    <item>
+      <title>Web API Practices: Controller Unit Tests</title>
+      <link>/web-api-practices-controller-unit-tests/</link>
+      <pubDate>Sun, 13 Nov 2016 20:58:37 +1200</pubDate>
+      
+      <guid>/web-api-practices-controller-unit-tests/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m sharing some of the best practices that I used in a recent ASP .Net Web API and MVC project. I recently gave a presentation to my team on the Top 5 Web API &lt;span style=&#34;text-decoration: line-through;&#34;&gt;Best&lt;/span&gt; Practices, and I continue the series by discussing controller unit tests. I struck out the word ‘Best&#39; intentionally. There are so many best practices out there. These practices happened to work very well for this project, but your mileage may vary. However, I think most people understand the value of unit testing, and I’m here to show you some tips in regards to writing controller unit tests.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Web API Practices: Hypermedia API Responses</title>
+      <link>/web-api-practices-hypermedia-api-responses/</link>
+      <pubDate>Sun, 06 Nov 2016 17:44:36 +1200</pubDate>
+      
+      <guid>/web-api-practices-hypermedia-api-responses/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m sharing some of the best practices that I used in a recent ASP .Net Web API and MVC project. I recently gave a presentation to my team on the Top 5 Web API &lt;span style=&#34;text-decoration: line-through;&#34;&gt;Best&lt;/span&gt; Practices, and I continue the series by discussing Hypermedia API responses. I struck out the word ‘Best&#39; intentionally. There are so many best practices out there but not all of them will suit your unique circumstance, especially in regards to Hypermedia API design. These practices happened to work very well for this project, but your mileage may vary.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Web API Practices: Consistent Response Format</title>
+      <link>/web-api-practices-consistent-response-format/</link>
+      <pubDate>Mon, 31 Oct 2016 09:43:56 +1200</pubDate>
+      
+      <guid>/web-api-practices-consistent-response-format/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m sharing some of the best practices that I used in a recent ASP .Net Web API and MVC project. I recently gave a presentation to my team on the Top 5 Web API &lt;span style=&#34;text-decoration: line-through;&#34;&gt;Best&lt;/span&gt; Practices, and I continue the series by discussing AutoMapper this week. I struck out the word ‘Best&#39; intentionally. There are so many best practices out there but not all of them will suit your unique circumstance. These practices happened to work very well for this project, but your mileage may vary. Consistent response formats, however, are pretty much universal and something that all of us should be doing already.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Revisited: Cutting-Edge Technology Cuts</title>
+      <link>/revisited-cutting-edge-technology-cuts/</link>
+      <pubDate>Sun, 11 Sep 2016 11:25:28 +1200</pubDate>
+      
+      <guid>/revisited-cutting-edge-technology-cuts/</guid>
+      <description>This coder is stepping away from the front line for two weeks while he takes a well-deserved holiday on the Indonesian destination of Bali. Instead, I will link to an article from the archives and add some new thoughts on it.
+This week I revisit my post Cutting-Edge Technology Cuts, where I lambasted ASP .Net Core RC1 for its weak tooling support and how I rolled back to ASP .Net 4.</description>
+    </item>
+    
+    <item>
+      <title>Web API Practices: AutoMapper for Object-Object Mapping</title>
+      <link>/web-api-practices-automapper-for-object-object-mapping/</link>
+      <pubDate>Sun, 04 Sep 2016 14:51:18 +1200</pubDate>
+      
+      <guid>/web-api-practices-automapper-for-object-object-mapping/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m sharing some of the best practices that I used in a recent ASP .Net Web API and MVC project. I recently gave a presentation to my team on the Top 5 Web API &lt;span style=&#34;text-decoration: line-through;&#34;&gt;Best&lt;/span&gt; Practices, and I continue the series by discussing AutoMapper this week. I struck out the word ‘Best&#39; intentionally. There are so many best practices out there but not all of them will suit your unique circumstance. These practices happened to work very well for this project, but your mileage may vary.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Web API Practices: Use Dependency Injection</title>
+      <link>/web-api-practices-use-dependency-injection/</link>
+      <pubDate>Sun, 28 Aug 2016 10:18:20 +1200</pubDate>
+      
+      <guid>/web-api-practices-use-dependency-injection/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been working on a web project for the past year that used both ASP .Net (4.5.2) Web API and MVC. The Web API provides a foundation for flexible data access, while MVC uses it to power a rich web application. I recently gave a presentation to my team on the Top 5 Web API &lt;del&gt;Best&lt;/del&gt; Practices, and I will reproduce portions of it over the next five entries. I struck out the word ‘Best&#39; intentionally. There are so many best practices out there but not all of them will suit your unique circumstance. These practices happened to work very well for this project, and we&amp;rsquo;ll start with a popular one - dependency injection.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Smart Date Picker: Unit Tests</title>
+      <link>/smart-date-picker-unit-tests/</link>
+      <pubDate>Sat, 20 Aug 2016 22:13:02 +1200</pubDate>
+      
+      <guid>/smart-date-picker-unit-tests/</guid>
+      <description>&lt;p&gt;I finally add some unit tests for my date range bumper logic. I based it on my earlier blog &lt;a href=&#34;/smart-date-picker-requirements/&#34;&gt;post on test cases&lt;/a&gt; with some additions. I subsequently found bugs that I wouldn’t have found otherwise. I also added FRP code to differentiate between start and end date selection, which I’ll briefly talk about later. But first, a community service message regarding unit tests.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Smart Date Picker: Selecting and bumping dates</title>
+      <link>/smart-date-picker-selecting-and-bumping-dates/</link>
+      <pubDate>Sun, 24 Jul 2016 13:18:33 +1200</pubDate>
+      
+      <guid>/smart-date-picker-selecting-and-bumping-dates/</guid>
+      <description>&lt;p&gt;This is a direct continuation of the &lt;a href=&#34;/smart-date-picker-period-type-frp-primitives/&#34;&gt;last post on using FRP primitives&lt;/a&gt; to model changing the period type. I will jump straight into the next part of adding more smart date picker functionality. You might want to review the &lt;a href=&#34;/?s=smart+date+picker&#34;&gt;entire series&lt;/a&gt; on making a smart date picker if this is your first visit.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Smart Date Picker: Changing the period type using FRP Primitives</title>
+      <link>/smart-date-picker-changing-the-period-type-using-frp-primitives/</link>
+      <pubDate>Sun, 17 Jul 2016 15:05:55 +1200</pubDate>
+      
+      <guid>/smart-date-picker-changing-the-period-type-using-frp-primitives/</guid>
+      <description>&lt;p&gt;I’ve faffed about at the fringes of functional reactive programming (FRP) for a while now, but I think it’s time to take a cold plunge into actually using some Sodium FRP primitives. FRP primitives are the fundamental operations (methods or functions) that make up the core of FRP. What makes them primitive is that they cannot be expressed using any other combination of operations.&lt;/p&gt;
+&lt;p&gt;My objective over the next few weeks is to reimagine the smart date picker’s data flow/dependency diagram by using FRP primitives. &lt;a href=&#34;https://github.com/SodiumFRP/sodium&#34;&gt;Sodium&lt;/a&gt;, the library I am using for this lesson, has ten FRP primitives. There isn’t enough space here to explain each one in detail (I recommend the book &lt;a href=&#34;https://www.manning.com/books/functional-reactive-programming&#34;&gt;Functional Reactive Programming&lt;/a&gt; for this purpose), but I will briefly introduce them as I go along.&lt;/p&gt;
+&lt;p&gt;Today I start implementing the changes to the period type.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Smart Date Picker: Cells and Streams</title>
+      <link>/smart-date-picker-cells-and-streams/</link>
+      <pubDate>Sun, 10 Jul 2016 13:43:58 +1200</pubDate>
+      
+      <guid>/smart-date-picker-cells-and-streams/</guid>
+      <description>&lt;p&gt;I covered the &lt;a href=&#34;/smart-date-picker-requirements/&#34;&gt;requirements of the smart date picker&lt;/a&gt; in my last post, which ended with a data flow diagram. Today I aim to translate that conceptual view to primitives within &lt;a href=&#34;https://github.com/SodiumFRP/sodium&#34;&gt;Sodium, a functional reactive programming (FRP) library&lt;/a&gt; supported on multiple languages. The only types in Sodium are Cells and Streams. I will attempt to provide a brief explanation.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Smart Date Picker: Requirements and Test Cases</title>
+      <link>/smart-date-picker-requirements-and-test-cases/</link>
+      <pubDate>Sat, 02 Jul 2016 22:49:16 +1200</pubDate>
+      
+      <guid>/smart-date-picker-requirements-and-test-cases/</guid>
+      <description>&lt;p&gt;I hinted three weeks ago that I wished to &lt;a href=&#34;/events-are-evil/&#34;&gt;learn functional reactive programming&lt;/a&gt; by implementing a smart date picker. Since then I shared my &lt;a href=&#34;/first-impressions-functional-reactive-programming-sodium/&#34;&gt;impressions on the book&lt;/a&gt; but have yet to delve into actually working on the control. I haven&amp;rsquo;t had much time to read the book (curse you, Uncharted 4), and so I am still a bit clueless about where to start. It&amp;rsquo;s time to take the plunge though, and I will outline my stumbles through thinking about business requirements from a data perspective. In this post I flesh out the requirements and test cases a bit more and think about how they rely on each other.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>More Impressions Functional Reactive Programming with Sodium</title>
+      <link>/more-impressions-functional-reactive-programming-with-sodium/</link>
+      <pubDate>Sun, 26 Jun 2016 12:27:09 +1200</pubDate>
+      
+      <guid>/more-impressions-functional-reactive-programming-with-sodium/</guid>
+      <description>I shared a couple of my first impressions reading the Functional Reactive Programming book, and I am back with more after going a bit further with the book. I am spending this weekend in beautiful Queenstown, New Zealand for the Queenstown Winter Festival so this post is shorter than usual.
+Book Organisation This book is not a ‘cookbook’ – it is not a collection of code recipes you can read and then easily apply in your code.</description>
+    </item>
+    
+    <item>
+      <title>First Impressions Functional Reactive Programming with Sodium</title>
+      <link>/first-impressions-functional-reactive-programming-with-sodium/</link>
+      <pubDate>Sun, 19 Jun 2016 12:26:07 +1200</pubDate>
+      
+      <guid>/first-impressions-functional-reactive-programming-with-sodium/</guid>
+      <description>This is part of an ongoing series where I review the book Functional Reactive Programming by Stephen Blackheath and Anthony Jones. Kindly note that anything I write here may be incorrect and not indicative of the author’s intent. After all, making mistakes is the mother of learning and this book review is meant to be a truthful reflection of my own experiences grasping a new concept. The review copy I received was version 11 in their Manning’s Early Access Program, so the book’s contents may differ at the time of publication.</description>
+    </item>
+    
+    <item>
+      <title>Events Are Evil</title>
+      <link>/events-are-evil/</link>
+      <pubDate>Sun, 12 Jun 2016 12:57:28 +1200</pubDate>
+      
+      <guid>/events-are-evil/</guid>
+      <description>&lt;p&gt;Events are evil. Yes, that is quite the incendiary statement to make. To clarify, I don’t mean events in the physical world like rock concerts and art festivals. I am referring to the common event handling patterns most programmers are familiar with, such as button click event handlers and JavaScript callbacks. They are popular because they are simple to set up – most languages support some form of asynchronous event handling out of the box. However, its prevalence does not mean it is perfect, and I have recently come across a different event handling paradigm that promises to rehabilitate events.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Developing Software on Windows 10 IoT</title>
+      <link>/developing-software-on-windows-10-iot/</link>
+      <pubDate>Sun, 05 Jun 2016 09:35:42 +1200</pubDate>
+      
+      <guid>/developing-software-on-windows-10-iot/</guid>
+      <description>&lt;p&gt;It’s taken me awhile to get into the Internet of Things due to my lack of knowledge around interfacing with the hardware. Luckily, developing software on Windows 10 IoT is almost a breeze for .Net developers thanks to Microsoft’s great tooling support. There are a lot of great tutorials online so I will focus instead on highlighting unique aspects about programming applications for the Raspberry Pi 3.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Configuring Windows 10 IoT on Raspberry Pi 3</title>
+      <link>/configuring-windows-10-iot-on-raspberry-pi-3/</link>
+      <pubDate>Sun, 29 May 2016 09:06:07 +1200</pubDate>
+      
+      <guid>/configuring-windows-10-iot-on-raspberry-pi-3/</guid>
+      <description>&lt;p&gt;Configuring Windows 10 IoT is the next logical step after &lt;a href=&#34;/installing-windows-10-iot/&#34;&gt;OS installation&lt;/a&gt;. These tips should apply to any of the boards supported by Windows 10 IoT, but I will focus on the Raspberry Pi 3.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows 10 IoT on Raspberry Pi 3 – A Toe Dip</title>
+      <link>/windows-10-iot-on-raspberry-pi-3-a-toe-dip/</link>
+      <pubDate>Sun, 15 May 2016 11:04:32 +1200</pubDate>
+      
+      <guid>/windows-10-iot-on-raspberry-pi-3-a-toe-dip/</guid>
+      <description>&lt;p&gt;Being a software engineering graduate, I’ve always looked at hardware as the other side of the river from me. It sounds a bit surprising considering my first job was at Agilent (now &lt;a href=&#34;http://jobs.keysight.com/country-malaysia/#section-overview&#34;&gt;Keysight&lt;/a&gt;), a top electronics measurement company, but I’ve always treated the hardware component of my work with a little apprehension. However, the Internet of Things (IoT) is becoming very prolific and it’s no longer something I can easily ignore. I’ve thus decided to start dipping my toes in that cold, cold river, beginning with installing Windows 10 IoT on a Raspberry Pi 3. I will share my experiences as I learn more about it.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cutting-Edge Technology Cuts</title>
+      <link>/cutting-edge-technology-cuts/</link>
+      <pubDate>Sun, 24 Apr 2016 04:51:09 +1200</pubDate>
+      
+      <guid>/cutting-edge-technology-cuts/</guid>
+      <description>&lt;p&gt;I bring you a cautionary tale this week about the dangers of using cutting-edge technology and how it can cut you. Like many programmers I get excited with the prospect of using new technology, frameworks, or languages – especially for commercial uses. It’s one thing to try stuff out on the weekend and build tutorial projects, but it’s another ball game to actually build something someone would buy. So I rubbed my hands with glee when the opportunity arose to redesign a web app that was written in ASP .Net MVC 3.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
