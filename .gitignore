@@ -7,7 +7,7 @@ _site/
 vendor/
 
 # Hugo default output directory
-#/public
+/public
 /resources
 /isablelivereload
 
